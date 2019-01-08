@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion  28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.bubbles.StorageInfo"
+        minSdkVersion 11
+        targetSdkVersion 28
+        versionCode 19
+        versionName "3.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('libs/gesture-imageview.jar')
+}
